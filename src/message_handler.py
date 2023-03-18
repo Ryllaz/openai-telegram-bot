@@ -6,7 +6,6 @@ import openai
 
 async def send_chat_action(chat_id, context: ContextTypes.DEFAULT_TYPE):
     while True:
-        print('send_chat_action')
         await context.bot.send_chat_action(chat_id, constants.ChatAction.TYPING)
         await asyncio.sleep(4)
 
