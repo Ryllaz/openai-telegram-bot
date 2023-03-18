@@ -1,0 +1,13 @@
+.git
+.cache
+
+lib/
+bin/
+include/
+
+**/__pycache__/
+.history/
+.vscode/
+
+.env
+pyvenv.cfg
