@@ -29,6 +29,7 @@ eggs/
 *.db
 
 # Environments
+.env
 env/
 venv/
 ENV/
