@@ -1,0 +1,100 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+bin/
+include/
+lib/
+dist/
+build/
+eggs/
+*.egg-info/
+
+# PyCharm settings
+.idea/
+
+# VSCode settings
+.vscode/
+
+# Miscellaneous
+*.swp
+*.log
+*.bak
+*.cache
+*.db
+
+# Environments
+env/
+venv/
+ENV/
+
+# Dependencies
+/.venv/
+/.env/
+/.pytest_cache/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+coverage/
+.coverage
+
+# Jupyter notebook
+.ipynb_checkpoints/
+
+# System generated files
+.DS_Store
+Thumbs.db
+
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore pipenv virtual environment
+/.venv/
+
+# Ignore PyCharm and Anaconda project files
+.idea/
+.anaconda/
+
+# Ignore coverage reports
+.coverage*/
+
+# Ignore logs
+logs/
+
+# Ignore SQLite files
+*.db
+
+# Ignore compiled binary files
+*.dll
+*.pyd
+*.exe
+
+# Ignore package files
+*.egg-info/
+*.egg
+*.tar.gz
+*.whl
+
+# Ignore virtual environment files
+env/
+venv/
+
+# Ignore backup files
+*~
+*.bak
+*.swp
+
+# Ignore Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+pyvenv.cfg
