@@ -40,8 +40,6 @@ TELEGRAM_AUTH_GROUP_ID='...' TELEGRAM_BOT_TOKEN='...' OPENAI_API_KEY='...' pytho
 |MAX_MODEL_TOKENS|`1000`||
 |MODEL_ID|`gpt-3.5-turbo`|ID of model to use. See compatibility with MODEL_TYPE here: https://platform.openai.com/docs/models/model-endpoint-compatibility|
 |MODEL_TYPE|`chat`|Can be `chat` or `competition`. You must set this value with MODEL_ID|
-|MAX_RESPONSE_TOKENS|`500`||
-|THROTTLE_INTERVAL|`20`||
 |CONVERSATIONS_TIMEOUT|`604800000`|timeout before conversation will be cleaned, in ms|
 
 ### Docker
