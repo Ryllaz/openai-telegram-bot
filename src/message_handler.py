@@ -47,11 +47,13 @@ async def handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 text
             )
     except Exception as e:
-        print(e)
-
-        await context.bot.send_message(
-                chat_id, 
-                'The response from AI is a bit unexpected. Please try again :-) If error persists - please try change your request a bit.'
-            )
+        print(str(e))
+        try:
+            await context.bot.send_message(
+                    chat_id, 
+                    'The response from AI is a bit unexpected. Please try again :-) If error persists - please try change your request a bit.'
+                )
+        except Exception as e:
+            print('Error during sending error message: ' + str(e))
     finally:
         typing_task.cancel()
