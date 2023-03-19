@@ -3,6 +3,11 @@
 It is OpenAI telegram bot that can use any OpenAI model.
 It uses simple auth via private Telegram group - bot will not work with users that are not members of some certain private group.
 
+## Requirements
+- python3
+- shell (zsh, bash, sh)
+- Docker (for running conterized)
+
 ## Prepare
 
 1. Register at https://platform.openai.com/
@@ -19,7 +24,7 @@ Or you can pass it to python directly.
 
 ### Shell
 ```shell
-TELEGRAM_AUTH_GROUP_ID='...' TELEGRAM_BOT_TOKEN='...' OPENAI_API_KEY='...' node server.js
+TELEGRAM_AUTH_GROUP_ID='...' TELEGRAM_BOT_TOKEN='...' OPENAI_API_KEY='...' python3 server.py
 ```
 
 ## Full env list
