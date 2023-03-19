@@ -51,7 +51,7 @@ async def handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         await context.bot.send_message(
                 chat_id, 
-                'The response from AI is a bit unextected. Please try again :-) If error persists - please try change your request a bit.'
+                'The response from AI is a bit unexpected. Please try again :-) If error persists - please try change your request a bit.'
             )
     finally:
         typing_task.cancel()
