@@ -35,18 +35,18 @@ async def handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     try: 
         response = await asyncio.wait_for(response_task, int(os.getenv('RESPONSE_TIMEOUT')))
+
+        if response and response.choices and response.choices[0] and response.choices[0].message and response.choices[0].message.content:
+            text = response.choices[0].message.content
+        elif response and response.choices and response.choices[0] and response.choices[0].text:
+            text = response.choices[0].text
+
+        if text:
+            await context.bot.send_message(
+                chat_id, 
+                text
+            )
     except Exception as e:
         print(e)
     finally:
         typing_task.cancel()
-
-    if response and response.choices and response.choices[0] and response.choices[0].message and response.choices[0].message.content:
-        text = response.choices[0].message.content
-    elif response and response.choices and response.choices[0] and response.choices[0].text:
-        text = response.choices[0].text
-
-    if text:
-        await context.bot.send_message(
-            chat_id, 
-            text
-        )
