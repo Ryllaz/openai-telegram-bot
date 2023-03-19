@@ -33,9 +33,12 @@ async def handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 max_tokens = os.getenv('MAX_MODEL_TOKENS')
             ))
 
-    response = await asyncio.wait_for(response_task, int(os.getenv('RESPONSE_TIMEOUT')))
-
-    typing_task.cancel()
+    try: 
+        response = await asyncio.wait_for(response_task, int(os.getenv('RESPONSE_TIMEOUT')))
+    except Exception as e:
+        print(e)
+    finally:
+        typing_task.cancel()
 
     if response and response.choices and response.choices[0] and response.choices[0].message and response.choices[0].message.content:
         text = response.choices[0].message.content
