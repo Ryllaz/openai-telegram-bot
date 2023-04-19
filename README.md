@@ -17,6 +17,14 @@ It uses simple auth via private Telegram group - bot will not work with users th
 5. Add trusted users to private group you created.
 6. (optional) Create .env file with variables you need.
 
+## # Initial setup
+
+```shell
+make venv # create virtual env for Python
+make env # create .env from .env.dist
+make install # install deps
+```
+
 ## Usage
 You can set `TELEGRAM_AUTH_GROUP_ID`, `TELEGRAM_BOT_TOKEN`, `OPENAI_API_KEY` and other variables in your env.
 
